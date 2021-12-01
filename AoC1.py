@@ -1,5 +1,3 @@
-""" ADVENT OF CODE day 1 """
-
 import lib
 
 list = lib.input_as_ints("input1.txt")
