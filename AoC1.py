@@ -16,6 +16,5 @@ for i in range(len(list)-2):
     last_value =list[i] + list[i+1] + list[i+2]
 
 print(increase_2)
-print("pimmel")
 
 
