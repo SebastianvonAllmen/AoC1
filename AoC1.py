@@ -1,39 +1,22 @@
-f = open("input1.txt")
-lines = f.readlines()
+""" ADVENT OF CODE day 1 """
 
-numbers = list(map(int, lines))
+import lib
 
-j = 0
-number = []
+list = lib.input_as_ints("input1.txt")
 
-for i in range(len(numbers)):
-    if(i+2 == len(numbers)):
-        break
-    
-    number.insert(j,numbers[i])
-    number[j] += numbers[i+1]
-    number[j] += numbers[i+2]
-
-    j += 1
-
-
-decrease = 0
 increase = 0
-
-
-for i in range(len(number)):
-
-    if(i == len(number)-1):
-        break
-
-    if(number[i+1] < number[i]):
-        decrease += 1
-
-    if(number[i+1] > number[i]):
-        increase +=1
-
-
-
+for i in range(len(list)):
+    if list[i] > list[i-1]:
+        increase += 1
 print(increase)
+
+increase_2 = 0
+last_value = list[0] + list[1] + list[2]
+for i in range(len(list)-2):
+    if list[i] + list[i+1] + list[i+2] > last_value:
+        increase_2 += 1
+    last_value =list[i] + list[i+1] + list[i+2]
+
+print(increase_2)
 
 
