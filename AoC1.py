@@ -13,8 +13,6 @@ last_value = list[0] + list[1] + list[2]
 for i in range(len(list)-2):
     if list[i] + list[i+1] + list[i+2] > last_value:
         increase_2 += 1
-    last_value =list[i] + list[i+1] + list[i+2]
+    last_value = list[i] + list[i+1] + list[i+2]
 
 print(increase_2)
-
-
